@@ -28,7 +28,13 @@ class Server {
     
     this.app.get('/'+path+'/:id', (request, response) => {
       const found = json.filter((item) => item.id == request.params.id)
-      //TODO: return the response or error
+      
+      if (found.length > 0) {
+        this.logger({time: (new Date()).toUTCString(), status: 200, url: request.originalUrl});
+        response.json(found);
+      } else {
+        response.status(404).send('Sorry, this user does not exist!');
+      }
     });
   }
 }
