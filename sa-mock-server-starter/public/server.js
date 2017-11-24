@@ -33,6 +33,7 @@ class Server {
         this.logger({time: (new Date()).toUTCString(), status: 200, url: request.originalUrl});
         response.json(found);
       } else {
+        this.logger({time: (new Date()).toUTCString(), status: 404, url: request.originalUrl});
         response.status(404).send('Sorry, this user does not exist!');
       }
     });
