@@ -36,7 +36,7 @@ class MainWindow extends Component {
   render() {
     return (
     <div>
-      <header className="mw-header">Window Header
+      <header className="mw-header">{this.state.log.length} {(this.state.log.length == 1) ? "Request" : "Requests"}
       </header>
       <div className="mw-table-container">
       <Table className="mw-log-table" hover="true" striped="true" bordered="false" responsive>
@@ -49,7 +49,7 @@ class MainWindow extends Component {
         </thead>
         <tbody>
           { this.state.log.map((row, index) => 
-            <tr key={index}>
+            <tr key={index} className={(row.status >= 400) ? "error-row": ""}>
               <td>{row.time}</td>
               <td>{row.status}</td>
               <td>{row.url}</td>
