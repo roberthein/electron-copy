@@ -1,11 +1,14 @@
 .mw-header {
   padding: 10px;
-  font-size: 2.25em;
+  font-size: 1.25em;
+  background: #333333;
+  color: #ffffff;
+  height: 50px;
 }
 
 .mw-header-link {
   margin-left: 10px;
-  color: #ff0000;
+  color: #000000;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -18,12 +21,13 @@
 .mw-table-container {
   position: absolute;
   overflow-y: scroll;
-  border: 2px solid #00ff00;
+  border: 2px solid #333333;
+  width: 100%;
+  height: 100% - 50px;
 }
 
 .mw-intro {
   padding: 0px;
-  color: #0000ff;
 }
 
 .mw-time-col {
@@ -32,4 +36,8 @@
 
 .mw-code-col {
   width: 80px;
+}
+
+.error-row {
+  color: #ff0000;
 }
