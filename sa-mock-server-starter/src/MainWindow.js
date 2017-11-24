@@ -43,7 +43,7 @@ class MainWindow extends Component {
         <thead>
           <tr>
             <th className="mw-time-col">Time</th>
-            <th>Code</th>
+            <th className="mw-code-col">Code</th>
             <th>Url</th>
           </tr>
         </thead>
